@@ -1,0 +1,79 @@
+/* ১. Google Fonts থেকে Syne এবং Fontshare থেকে Satoshi ইমপোর্ট */
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap");
+
+body,
+button,
+input {
+  font-family: "Satoshi", sans-serif;
+  background-color: #0d1117;
+  color: #e6edf3;
+}
+
+h1,
+h2,
+h3,
+.fancy-heading {
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.container {
+  max-width: 1280px;
+
+  margin: auto;
+
+  padding-inline: 24px;
+}
+
+.section {
+  padding-block: 100px;
+}
+
+:root {
+  --radius-sm: 8px;
+
+  --radius-md: 12px;
+
+  --radius-lg: 18px;
+
+  --radius-xl: 24px;
+}
+
+:root {
+  --shadow-sm: --shadow-md: --shadow-lg: ;
+}
+
+:root {
+  --transition: 
+
+;
+}
+
+/* Custom scrollbar styling */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(230, 237, 243, 0.2);
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(230, 237, 243, 0.35);
+}
+
+/* Firefox scrollbar support */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(230, 237, 243, 0.2) #0d1117;
+}
