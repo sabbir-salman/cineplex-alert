@@ -1,79 +1,73 @@
-/* ১. Google Fonts থেকে Syne এবং Fontshare থেকে Satoshi ইমপোর্ট */
-@import url("https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap");
 @import url("https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap");
-
-body,
-button,
-input {
-  font-family: "Satoshi", sans-serif;
-  background-color: #0d1117;
-  color: #e6edf3;
-}
-
-h1,
-h2,
-h3,
-.fancy-heading {
-  font-family: "Syne", sans-serif;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-}
-
-.container {
-  max-width: 1280px;
-
-  margin: auto;
-
-  padding-inline: 24px;
-}
-
-.section {
-  padding-block: 100px;
-}
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@700;800&display=swap");
 
 :root {
+  --background: #09090b;
+  --surface: #18181b;
+  --surface-hover: #232326;
+  --text-primary: #fafafa;
+  --text-secondary: #d4d4d8;
+  --text-muted: #a1a1aa;
+  --primary: #d4af37;
+  --primary-hover: #c89b2d;
+  --primary-light: #f4e4a6;
+  --danger: #dc2626;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --border: #2a2a2e;
+  /* design tokens */
   --radius-sm: 8px;
-
   --radius-md: 12px;
-
-  --radius-lg: 18px;
-
-  --radius-xl: 24px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.6);
+  --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.6);
+  --space-2: 8px;
+  --space-4: 16px;
+  --space-6: 24px;
 }
 
-:root {
-  --shadow-sm: --shadow-md: --shadow-lg: ;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--background);
+  color: var(--text-primary);
 }
 
-:root {
-  --transition: 
-
-;
+/* Common UI helpers */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-primary {
+  background: linear-gradient(180deg, var(--primary-light), var(--primary));
+  color: #000;
+}
+.btn-ghost {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+}
+.muted {
+  color: var(--text-muted);
 }
 
-/* Custom scrollbar styling */
-::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background: #0d1117;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgba(230, 237, 243, 0.2);
-  border-radius: 999px;
-  border: 3px solid transparent;
-  background-clip: padding-box;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(230, 237, 243, 0.35);
-}
-
-/* Firefox scrollbar support */
-html {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(230, 237, 243, 0.2) #0d1117;
+@media (max-width: 800px) {
+  .container {
+    padding: 0 12px;
+  }
 }
